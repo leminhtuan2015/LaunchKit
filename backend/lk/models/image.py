@@ -77,7 +77,9 @@ class Image(APIModel):
       if quality:
         # quality should be 0-100
         args.append('q%d' % quality)
-    return self.gae_image_url + '=%s' % '-'.join(args)
+    self.gae_image_url + '=%s' % '-'.join(args)
+    self.gae_image_url = self.gae_image_url.replace("localhost","192.168.10.151")
+    return self.gae_image_url
 
   def to_dict(self):
     return {

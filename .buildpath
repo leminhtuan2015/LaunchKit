@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildpath>
+	<buildpathentry kind="src" path="ansible/roles/lk-google-app-engine/files"/>
+	<buildpathentry kind="src" path="skit/node_modules/skit/node_modules/acorn/bin"/>
+	<buildpathentry kind="src" path="skit/node_modules/skit/node_modules/request/node_modules/node-uuid/benchmark"/>
+</buildpath>
