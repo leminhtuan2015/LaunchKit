@@ -50,7 +50,7 @@ class PublicRedirectHandler(BaseHandler):
     self._redirect('https://launchkit.io/?from_blobstore=1')
 
 
-ACCEPTABLE_PREFIXES = ['https://launchkit.io/', 'http://localhost:', 'http://192.168.', 'http://127.0.0.1:']
+ACCEPTABLE_PREFIXES = ['http://192.168.10.151:', 'https://launchkit.io/', 'http://localhost:', 'http://192.168.', 'http://127.0.0.1:']
 
 
 class PublicHandler(BaseHandler):
@@ -144,7 +144,8 @@ class PublicFileUploadHandler(PublicHandler):
     if self.app.debug:
       scheme, netloc, path, params, query, fragment = urlparse.urlparse(blobstore_upload_url)
       host, port = netloc.split(':')
-      host = self.request.headers.get('host', 'localhost').split(':')[0]
+      #host = self.request.headers.get('host', 'localhost').split(':')[0]
+      host='192.168.10.151'
       netloc = '%s:%s' % (host, port)
       blobstore_upload_url = urlparse.urlunparse([scheme, netloc, path, params, query, fragment])
 

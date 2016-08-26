@@ -172,6 +172,7 @@ def _build_and_send_bundle(bundle_id):
     if '/_ah/img/' in image_url:
       # for local debug images, don't specify =s0, because quality gets degraded.
       full_image_url = image_url
+      # full_image_url = full_image_url.replace("localhost","192.168.10.151")
     elif bundle.hq:
       # for an HQ bundle, request PNG format for the download.
       full_image_url = image_url + '=s0-rp'
